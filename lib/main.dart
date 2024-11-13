@@ -16,35 +16,19 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
-            verticalDirection: VerticalDirection.down,
-            // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
-              Container(
-                height: 100.00,
-                width: 100.00,
-                color: Colors.white,
-                child: const Text('Container 1'),
+              CircleAvatar(
+                radius: 50.0,
+                backgroundImage: AssetImage('images/light.jpg'),
               ),
-              SizedBox(
-                height: 20.00,
-              ),
-              Container(
-                height: 100.00,
-                width: 200.00,
-                color: Colors.blue,
-                child: const Text('Container 2'),
-              ),
-              Container(
-                height: 100.00,
-                width: 300.00,
-                color: Colors.red,
-                child: const Text('Container 3'),
-              ),
-              Container(
-                width: double.infinity,
-                height: 10,
-              ),
+              Text(
+                'Light Rao',
+                style: TextStyle(
+                  fontSize: 40.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              )
             ],
           ),
         ),
