@@ -39,7 +39,61 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                   fontWeight: FontWeight.bold,
                 ),
-              )
+              ),
+              Container(
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 25.0,
+                ),
+                color: Colors.white,
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.phone,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      '+44 123 456 789',
+                      style: TextStyle(
+                        color: Colors.teal.shade900,
+                        fontFamily: 'SourceSans3',
+                        fontSize: 20.0,
+                      ),
+                    )
+                  ],
+                ),
+              ),
+              Container(
+                color: Colors.white,
+                padding: EdgeInsets.all(10.0),
+                margin: EdgeInsets.symmetric(
+                  vertical: 10,
+                  horizontal: 25,
+                ),
+                child: Row(
+                  children: [
+                    Icon(
+                      Icons.email,
+                      color: Colors.teal,
+                    ),
+                    SizedBox(
+                      width: 10,
+                    ),
+                    Text(
+                      'lightrao@email.com',
+                      style: TextStyle(
+                        fontSize: 20,
+                        color: Colors.teal.shade900,
+                        fontFamily: 'SourceSans3',
+                      ),
+                    )
+                  ],
+                ),
+              ),
             ],
           ),
         ),
