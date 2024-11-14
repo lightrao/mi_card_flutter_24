@@ -16,12 +16,13 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              CircleAvatar(
+              const CircleAvatar(
                 radius: 50.0,
                 backgroundImage: AssetImage('images/light.jpg'),
               ),
-              Text(
+              const Text(
                 'Light Rao',
                 style: TextStyle(
                   fontFamily: 'Pacifico',
@@ -40,58 +41,50 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Container(
-                padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.symmetric(
-                  vertical: 10,
-                  horizontal: 25.0,
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(
+                  color: Colors.teal.shade100,
                 ),
-                color: Colors.white,
-                child: Row(
-                  children: [
-                    Icon(
+              ),
+              Card(
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 10,
+                    horizontal: 25.0,
+                  ),
+                  child: ListTile(
+                    leading: const Icon(
                       Icons.phone,
                       color: Colors.teal,
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
+                    title: Text(
                       '+44 123 456 789',
                       style: TextStyle(
                         color: Colors.teal.shade900,
                         fontFamily: 'SourceSans3',
                         fontSize: 20.0,
                       ),
-                    )
-                  ],
-                ),
-              ),
-              Container(
-                color: Colors.white,
-                padding: EdgeInsets.all(10.0),
-                margin: EdgeInsets.symmetric(
+                    ),
+                  )),
+              Card(
+                margin: const EdgeInsets.symmetric(
                   vertical: 10,
                   horizontal: 25,
                 ),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+                child: ListTile(
+                  leading: const Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    'lightrao@email.com',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: Colors.teal.shade900,
+                      fontFamily: 'SourceSans3',
                     ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'lightrao@email.com',
-                      style: TextStyle(
-                        fontSize: 20,
-                        color: Colors.teal.shade900,
-                        fontFamily: 'SourceSans3',
-                      ),
-                    )
-                  ],
+                  ),
                 ),
               ),
             ],
